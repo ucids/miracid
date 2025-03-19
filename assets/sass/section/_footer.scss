@@ -1,0 +1,364 @@
+/*==========================================================================
+* Footer One CSS
+==========================================================================*/
+.footer__one {
+    background: var(--color-1);
+    overflow: hidden;
+    &-cta {
+        padding: 80px 0;
+        border-bottom: 1px solid var(--border-color-3);
+        &-title {
+            h2 {
+                color: var(--text-white);
+            }
+        }
+        &-icon a i {
+            width: 100px;
+            height: 100px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-color-1);
+            color: var(--color-1);
+            border-radius: 50%;
+            font-size: 50px;
+            transition: 0.4s;
+            &:hover {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &-area {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+    &-widget {
+        .logo {
+            display: block;
+            margin-bottom: 30px;
+            img {
+                max-width: 170px;
+            }
+        }
+        h5 {
+            color: var(--text-white);
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 34px;
+        }
+        > h4 {
+            color: var(--text-white);
+            margin-bottom: 20px;
+            font-size: 28px;
+            line-height: 38px;
+        }
+        &.address {
+            margin-left: -40px;            
+        }
+        &-address {
+            h6 {
+                color: var(--color-6);
+                font-family: var(--body-font);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                a {
+                    transition: 0.4s;
+                    &:hover {
+                        color: var(--primary-color-1);
+                    }
+                }
+            }
+            h4 {
+                margin-top: 25px;
+                a {
+                    color: var(--primary-color-1);
+                    font-family: var(--body-font);
+                    font-size: 22px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
+.footer-widget-menu {
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            &:last-child {
+                margin: 0;
+            }
+            a {
+                color: var(--color-6);
+                transition: 0.4s;
+                font-size: 18px;
+                line-height: 28px;
+                &:hover {
+                    color: var(--primary-color-1);
+                }
+            }
+        }
+    }
+}
+/*==========================================================================
+* Footer Two CSS
+==========================================================================*/
+.footer__two {
+    background: var(--color-1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 110px;
+    &-widget {
+        h4 {
+            color: var(--text-white);
+            margin-bottom: 25px;
+        }
+        &.footer-border {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 250px;
+                background: var(--border-color-3);
+                left: -10px;
+                top: 0;
+            }
+        }
+        &-about {
+            a img {
+                max-width: 165px;
+            }
+            p {
+                color: var(--color-6);
+                max-width: 355px;
+                margin-top: 25px;
+            }
+            &-social {
+                margin-top: 30px;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    li {                
+                        list-style: none;
+                        a i {
+                            display: inline-block;
+                            width: 45px;
+                            height: 45px;
+                            line-height: 45px;
+                            text-align: center;
+                            background: var(--color-7);
+                            font-size: 15px;
+                            border-radius: 50%;
+                            color: var(--text-white);
+                            transition: 0.4s;
+                            &:hover {
+                                background: var(--primary-color-1);
+                                color: var(--color-1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-location {
+            h6 {
+                color: var(--text-white);
+                margin: 18px 0;
+            }
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                &-icon i {
+                    display: inline-block;
+                    width: 55px;
+                    height: 55px;
+                    line-height: 55px;
+                    text-align: center;
+                    font-size: 20px;
+                    border: 1px solid var(--border-color-3);
+                    border-radius: 50%;
+                    color: var(--primary-color-1);
+                }
+                &-info a {
+                    color: var(--color-6);
+                    max-width: 220px;
+                    display: inline-block;
+                    transition: 0.4s;
+                    &:hover {
+                        color: var(--primary-color-1);  
+                    }
+                }
+            }
+        }
+        .post__item {
+            border: 0;
+            padding: 0;
+            &-image {
+                width: 80px;
+                height: 80px;
+                min-width: 80px;
+                img {
+                    border-radius: 50%;
+                }
+            }
+            &-title {
+                span {
+                    color: var(--color-6);
+                }
+                h6 a {
+                    color: var(--text-white);
+                    &:hover {
+                        color: var(--primary-color-1);
+                    }
+                }
+            }
+        }
+    }
+}
+/*==========================================================================
+* Footer Four CSS
+==========================================================================*/
+.footer__four {
+    background: var(--color-2);
+    &-area {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+    &-widget {
+        .logo {
+            display: block;
+            margin-bottom: 30px;
+            img {
+                max-width: 170px;
+            }
+        }
+        h5 {
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 34px;
+        }
+        > h4 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            line-height: 38px;
+        }
+        &.address {
+            margin-left: -40px;            
+        }
+        &-address {
+            h6 {
+                color: var(--body-color);
+                font-family: var(--body-font);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                a {
+                    transition: 0.4s;
+                    &:hover {
+                        color: var(--primary-color-1);
+                    }
+                }
+            }
+            h4 {
+                margin-top: 25px;
+                a {
+                    color: var(--primary-color-1);
+                    font-family: var(--body-font);
+                    font-size: 22px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    .footer-widget-menu ul li a {
+        color: var(--body-color);
+    }
+}
+/*==========================================================================
+* Copyright CSS
+==========================================================================*/
+.copyright__area {
+    background: var(--color-1);
+    border-top: 1px solid var(--border-color-3);
+    padding: 26px 0;
+    &-content {
+        p {
+            margin: 0;
+            color: var(--color-6);
+            a {
+                color: var(--primary-color-1);
+                text-decoration: underline;
+            }
+        }
+    }
+    &-social {
+        ul {
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            li {
+                list-style: none;
+                a i {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 45px;
+                    height: 45px;
+                    background: var(--color-7);
+                    border-radius: 50%;
+                    color: var(--color-6);
+                    transition: 0.4s;
+                    font-size: 14px;
+                    &:hover {
+                        background: var(--primary-color-1);
+                        color: var(--color-1);
+                    }
+                }
+            }
+        }
+    }
+    &.four {
+        background: var(--color-2);
+        border-color: var(--border-color-2);
+        p {
+            color: var(--body-color);
+        }
+        .copyright__area-social ul li a i {
+            background: #EBE9DD;
+            color: var(--text-heading-color);
+            &:hover {
+                background: var(--primary-color-1);
+                color: var(--color-1);
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .footer__four-widget.address,
+    .footer__one-widget.address {
+        margin-left: 0;
+    }
+}
+@media (max-width: 767px) {
+    .footer__two-widget.footer-border::before {
+        display: none;
+    }
+}

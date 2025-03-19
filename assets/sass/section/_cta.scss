@@ -1,0 +1,116 @@
+/*==========================================================================
+* Cta CSS
+==========================================================================*/
+.cta__area {
+    background: var(--primary-color-1);
+    padding: 70px 0;
+    h2 {
+        color: var(--color-1);
+    }
+    .build_button {
+        background: var(--color-1);
+        color: var(--text-white);
+        i {
+			color: var(--text-white);
+			background: var(--color-5);
+        }
+    }
+}
+.cta__four {
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background: var(--color-2);
+        z-index: -1;
+    }
+    &-area {
+        position: relative;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 90px 0 100px 0;
+        border-radius: 15px;
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-1);
+            opacity: 0.6;
+            z-index: -1;
+        }
+        &-content {
+            max-width: 900px;
+            margin: 0 auto;
+            h2 {
+                color: var(--text-white);
+            }
+        }
+    }
+}
+/*==========================================================================
+* Subscribe CSS
+==========================================================================*/
+.subscribe__area {
+    position: relative;
+    margin-bottom: 100px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 45%;
+        background: var(--bg-white);
+    }
+    &-bg {
+        position: relative;
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 70px 55px;
+        overflow: hidden;
+        margin: 0;
+        border-radius: 20px; 
+    }
+    &-left {
+        h2 {
+            color: var(--text-white);
+        }
+    }
+    &-form {
+        form {
+            position: relative;
+            input {
+                height: 70px;
+                border-radius: 35px;
+            }
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 22px 30px;   
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .subscribe__area-bg {
+        padding: 60px 10px;
+    }
+    .subscribe__area-form form button {
+        padding: 22px 8px;
+        font-size: 14px;
+    }
+}

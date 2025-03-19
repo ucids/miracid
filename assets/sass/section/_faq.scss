@@ -1,0 +1,115 @@
+/*==========================================================================
+* Faq CSS
+==========================================================================*/
+.faq__area {
+    background: var(--color-1);
+    &-image {
+        img {
+            height: 660px;
+            object-fit: cover;
+            object-position: center right;
+            border-radius: 10px;
+            transform: scaleX(-1);
+        }
+    }
+    &-right {
+        &-title {
+            .subtitle {
+                border-color: #474644;
+                color: var(--text-white);
+            }
+            h2 {
+                color: var(--text-white);
+            }
+        }
+        .faq-item {
+            border-color: var(--border-color-3);
+            h5 {
+                color: var(--text-white);
+            }
+            &-body {
+                border-color: var(--border-color-3);
+                p {
+                    color: var(--color-6);
+                }
+            }
+            .icon {
+                &:not(.collapsed) {
+                    background: var(--primary-color-1);
+                    color: var(--color-1);
+                    &::after {
+                        content: "\f068";
+                        background: #DFA22C;
+                    }
+                }
+            }
+        }
+    }
+}
+.faq {
+    &-item {
+        margin-bottom: 20px;
+        border: 1px solid var(--border-color-1);
+        border-radius: 10px;
+        &:last-child {
+            margin: 0;
+        }
+        h5 {
+            cursor: pointer;
+            padding: 16px 25px;
+        }
+        .icon {
+            position: relative;
+            border-radius: 10px 10px 0 0;
+            &::after {
+                content: "\2b";
+                font-family: 'Font Awesome 6 Pro';
+                font-weight: 300;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--color-1);
+                right: 20px;
+                font-size: 18px;
+                transition: 0.4s;
+                background: var(--primary-color-1);
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                line-height: 26px;
+                text-align: center;
+            }
+            &:not(.collapsed) {
+                &::after {
+                    content: "\f068";
+                }
+            }
+        }    
+        &-body {
+            border-radius: 0 0 10px 10px;
+            transition: 0.3s;
+            border-top: 1px solid var(--border-color-1);
+            p {
+                padding: 15px 25px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.faq__page {
+    .faq-item h5 {
+        padding: 20px 25px;
+    }
+    .faq-item-body {
+        padding: 0 25px;
+        p {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .faq__area-image img {
+        height: 380px;
+    }
+}

@@ -1,0 +1,31 @@
+/*==========================================================================
+* Process Css
+==========================================================================*/
+.process__area {
+    &-title {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    &-item {
+        border-top: 1px dashed var(--border-color-3);
+        h6 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-1);
+            color: var(--text-white);
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 20px;
+            position: relative;
+            top: -20px;
+        }
+        p {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+    }
+}

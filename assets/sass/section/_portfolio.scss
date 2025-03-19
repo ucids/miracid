@@ -1,0 +1,456 @@
+/*==========================================================================
+* Portfolio One Css
+==========================================================================*/
+.portfolio__one {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 35%;
+        background: var(--color-2);
+        z-index: -1;
+
+    }
+    .portfolio_slide {
+        margin-right: -420px;
+    }
+    &-item {
+        img {
+            height: 480px;
+            object-fit: cover;
+        }
+        &-content {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+            transition: 0.4s;
+            background: #FFBF43;
+            border-radius: 15px;
+            padding: 45px 45px 45px 45px;
+            margin: 0px 50px 30px 50px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        &:hover .portfolio__one-item-content {
+            transform: translateY(-20px);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+/*==========================================================================
+* Portfolio Two CSS
+==========================================================================*/
+.portfolio__two {
+    &-item {
+        img {
+            border-radius: 10px;
+        }
+        &-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            width: 100%;
+            span {
+                font-size: 18px;
+                line-height: 30px;
+                color: var(--color-6);
+            }
+            h4 {
+                color: var(--text-white);
+                margin-bottom: 30px;
+                a:hover {
+                    color: var(--primary-color-1);
+                }
+            }
+            > a i {
+                background: var(--primary-color-1);
+                width: 55px;
+                height: 55px;
+                color: var(--color-1);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: 28px;
+                transition: 0.4s;
+                &:hover {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        &:hover {
+            img {
+                filter: brightness(0.66);
+            }
+            .portfolio__two-item-content {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+/*==========================================================================
+* Portfolio Two CSS
+==========================================================================*/
+.portfolio__three {
+    background: var(--color-1);
+    &-title {
+        .subtitle {
+            border-color: #474644;
+            color: var(--text-white);
+        }
+        h2 {
+            color: var(--text-white);
+        }
+    }
+    &-item {
+        img {
+            height: 560px;
+            object-fit: cover;
+        }
+        &-content {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+            transition: 0.4s;
+            background: #FFBF43;
+            border-radius: 15px;
+            padding: 0 45px 45px 45px;
+            margin: 0px 50px 30px 50px;
+            opacity: 0;
+            visibility: hidden;
+            a i {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--color-1);
+                color: var(--text-white);
+                border-radius: 50%;
+                transition: 0.4s;
+                font-size: 30px;
+                margin-top: -30px;
+                margin-bottom: 20px;
+            }
+        }
+        &:hover .portfolio__three-item-content {
+            transform: translateY(-20px);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+/*==========================================================================
+* Portfolio Four CSS
+==========================================================================*/
+.portfolio__four {
+    padding-bottom: 60px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background: var(--color-2);
+        z-index: -1;
+    }
+    &-area {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        gap: 1px;
+        padding: 0 50px;
+        &-item {
+            width: 50%;
+            transition: 0.5s;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            height: 620px;
+            cursor: pointer;
+            img {
+                filter: brightness(0.8);
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            &-area {
+                display: flex;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 3;
+                opacity: 0;
+                visibility: hidden;
+                transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+                transform: translateY(30px);
+                animation-duration: 1.25s;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            &.active {
+                width: 100%;
+                img {
+                    filter: brightness(1);
+                }
+                .portfolio__one-item-content {
+                    visibility: visible;
+                    opacity: 1;
+                    position: relative;
+                    margin: 0px 0px 50px 0px;
+                }
+                .portfolio__four-area-item-area {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+/*==========================================================================
+* Portfolio Four CSS
+==========================================================================*/
+.gallery__area {
+    &-button button {
+        font-weight: 500;
+        background: var(--bg-white);
+        color: var(--text-heading-color);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border-color-1);
+        padding: 10px 30px 10px 30px;
+        margin: 3px 3px 3px 3px;
+        &.active {
+            color: var(--color-1);
+            background: var(--primary-color-1);
+            border-color: var(--primary-color-1);
+        }
+    }
+}
+.success__area {
+    &-title {
+        p {
+            max-width: 500px;
+        }
+    }
+}
+.two__columns {
+    .portfolio__two-item {
+        position: relative;
+        z-index: 1;
+        img {
+            height: 480px;
+            object-fit: cover;
+        }
+    }
+}
+.three__columns {
+    .portfolio__three-item {
+        position: relative;
+        z-index: 1;
+        img {
+            height: 480px;
+            object-fit: cover;
+        }
+        &-content {
+            padding: 0 25px 30px 25px;
+            margin: 0px 30px 20px 30px;
+            h4 {
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+.four__columns {
+    .portfolio__four-item {
+        position: relative;
+        z-index: 1;
+        > a i {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-color-1);
+            color: var(--color-1);
+            border-radius: 50%;
+            transition: 0.4s;
+            font-size: 30px;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 2;
+        }
+        img {
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        &-content {
+            padding: 25px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: 0.4s;
+            transform: translateY(20px);
+            visibility: hidden;
+            opacity: 0;
+            span,
+            h5 {
+                color: var(--text-white);
+                a:hover {
+                    color: var(--primary-color-1);
+                }
+            }
+        }
+        &:hover {
+            .portfolio__four-item-content,
+            > a i {
+                visibility: visible;
+                opacity: 1;
+            }
+            .portfolio__four-item-content {
+                transform: translateY(0);                
+            }
+            img {
+                filter: brightness(0.4);
+            }
+        }
+    }
+}
+/*==========================================================================
+* Portfolio Four CSS
+==========================================================================*/
+.portfolio__details {
+    &-overview {
+        background: var(--color-2);
+        border-radius: 10px;
+        padding: 40px;
+        h4 {
+            margin-bottom: 35px;
+        }
+        &-item {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color-2);
+            span {
+                font-weight: 500;
+            }
+            h6 {
+                margin-top: 5px;
+                a:hover {
+                    color: var(--primary-color-1);
+                }
+            }
+            &:last-child {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+    &-area {
+        > img {
+            border-radius: 10px;        
+        }
+        &-list {
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-flex;
+                align-items: center;
+                list-style: none;
+                margin-bottom: 8px;
+                gap: 8px;
+                font-weight: 500;
+                color: var(--text-heading-color);
+                i {
+                    display: inline-flex;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-image img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1440px) {
+    .portfolio__four-area {
+        padding: 0;
+    }
+}
+@media (max-width: 1199px) {
+    .portfolio__one-item-content {
+        padding: 30px;
+    }
+}
+@media (max-width: 991px) {
+    .portfolio__four-area {
+        display: grid;
+        &-item {
+            width: 100%;
+            height: 120px;
+            &.active {
+                height: 480px;
+            }
+        }
+    }
+    .portfolio__one .portfolio_slide {
+        margin-right: 0;
+    }
+}
+@media (max-width: 575px) {
+    .portfolio__two-item img {
+        height: 360px;
+        object-fit: cover;
+    }
+    .portfolio__one-item,
+    .portfolio__three-item {
+        img {
+            height: 480px;
+        }
+        &-content {
+            padding: 0 30px 30px 30px;
+            margin: 0px 20px 10px 20px;
+        }
+    }
+    .portfolio__one-item-content {
+        padding: 30px;
+    }
+}

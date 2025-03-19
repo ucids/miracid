@@ -1,0 +1,119 @@
+/*==========================================================================
+* Dark CSS
+==========================================================================*/
+.light-n {
+    display: none;
+}
+.light {
+	display: none;
+}
+.dark-mode {
+    background: #1f1f1f;
+    --body-color: #CCCCCC;
+    --bg-white: #1e1e1e;
+    --color-1: #1c1c1c;
+    --color-2: #1e1e1e;
+    --text-heading-color: #ffffff;
+    --border-color-1: #383736;
+    --border-color-2: #383736;
+    --border-color-3: #383736;
+    .light-n {
+        display: inline-block;
+    }
+    .dark-n {
+        display: none;
+    }
+    .process__area {
+        background: #222222;
+    }
+    .choose__three-list-item {
+        background: #1f1f1f;
+    }
+    .about__four-counter,
+    .blog__four-item,
+    .portfolio__four::after,
+    .services__two .services__one-item > i,
+    .experience__area-list-item {
+        background: #242424;
+    }
+    .header__area-menubar-right-sidebar-icon,
+    .copyright__area.four .copyright__area-social ul li a i,
+    .skill__area-item-inner {
+        background: #343434;
+    }
+    .brand__area,
+    .banner__four-brand .scroll__slider,
+    .banner__four-brand,
+    .cta__four::after,
+    .footer__four,
+    .certification,
+    .contact__area-form,
+    .copyright__area.four,
+    .testimonial__three,
+    .testimonial__two {
+        background: #1c1c1c;
+    }
+    .header__four {
+        .header__area-menubar-center-menu ul li.menu-item-has-children > a::before,
+        .header__area-menubar-center-menu ul li a {
+            color: #ffffff;
+        }
+    }
+    .header__area-menubar-center-menu ul li.menu-item-has-children > a::before,
+    .price__area-item.active .price__area-item-price span,
+    .price__area-item.active .price__area-item-list ul li,
+    .header__area-menubar-right-sidebar-popup .sidebar-close-btn i,
+    .header__area-menubar-right-search-icon i,
+    .header__area-menubar-center-menu ul li a,
+    .portfolio__one-item-content span,
+    .portfolio__one-item-content h4,
+    .portfolio__three-item-content span,
+    .portfolio__three-item-content h4,
+    .banner__one-content-user h5,
+    .banner__one-content h1 {
+        color: #222222;
+    }
+    .cursor {
+        #cursor-ball {
+            background: var(--primary-color-1);
+        }
+        #cursor-text {
+            color: var(--color-1);
+        }
+    }
+    .services__four-title .build_button:hover {
+        color: #ffffff;
+    }
+    .services__one-item:hover {
+        background: var(--primary-color-1);
+        .more_btn,
+        > i {
+            color: var(--color-1);
+        }
+        h4 a {
+            color: var(--color-1);
+        }
+    }
+    .cursor.no #cursor-text,
+    .process__area-item h6 {
+        background: var(--primary-color-1);
+        color: var(--color-1);
+    }
+    .services__two .services__one-item:hover > i {
+        color: var(--primary-color-1);
+    }
+    .banner__four-brand .scroll__slider ul li img,
+    .brand__area ul li img {
+        filter: inherit;
+    }
+    .industry__four-left-item img {
+        filter: invert(1);
+    }
+    .copyright__area.four .copyright__area-social ul li a i:hover {
+        background: var(--primary-color-1);
+        color: var(--color-1);
+    }
+    .choose__us-left-counter {
+        background-image: url('../../assets/img/shape/shape-dark.png') !important;
+    }
+}

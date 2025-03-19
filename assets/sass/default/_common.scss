@@ -1,0 +1,770 @@
+/*------------------------------------------------------------------------
+
+Template Name:  BuildGo - Constructions HTML5 Template
+Author:  ThemeOri
+Author URI: http://themeori.com
+Version: 1.0.2
+Description: This Template is created for web template
+
+--------------------------------------------------------------------------
+START TABLE OF CONTENTS
+--------------------------------------------------------------------------
+* Color & Google Fonts
+* Common Css
+* Form CSS
+* Hedging CSS
+* Button CSS
+* Scroll Top CSS
+* Preloader CSS
+* Video Animation CSS
+* Menu Bar CSS
+* Menu Bar Sticky CSS
+* Menu Sidebar CSS
+* Responsive Menu Sidebar CSS
+* Banner One CSS
+* Banner Two CSS
+* Banner Three CSS
+* Banner Four CSS
+* About One CSS
+* About Two CSS
+* About Three CSS
+* About Four CSS
+* About Five CSS
+* Company History CSS
+* Blog One CSS
+* Blog Two CSS
+* Blog Three CSS
+* Blog Four CSS
+* Blog Standard CSS
+* Blog Details CSS
+* All Side Bar
+* Counter CSS
+* Process Css
+* Faq CSS
+* Request Quote CSS
+* Contact CSS
+* Pricing Css
+* Choose Us Css
+* Experience CSS
+* Industry One CSS
+* Industry Two CSS
+* Experience CSS
+* Footer One CSS
+* Footer Two CSS
+* Footer Four CSS
+* Copyright CSS
+* Cta CSS
+* Subscribe CSS
+* Award CSS
+* Text Slider CSS
+* Portfolio One Css
+* Portfolio Two CSS
+* Portfolio Two CSS
+* Portfolio Four CSS
+* Portfolio Four CSS
+* Portfolio Four CSS
+* Services One CSS
+* Services Two CSS
+* Services Three CSS
+* Services Four CSS
+* Services Details CSS
+* Video CSS
+* Skill Bar CSS
+* Team CSS
+* Testimonial One CSS
+* Testimonial Two CSS
+* Breadcrumb CSS
+* Error CSS
+* Theme Pagination CSS
+* Switch Tab CSS
+* Dark CSS
+--------------------------------------------------------------------------
+END TABLE OF CONTENTS
+--------------------------------------------------------------------------
+
+/*==========================================================================
+* Color & Google Fonts
+==========================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    --body-font: "DM Sans", sans-serif;
+    --heading-font: "Instrument Sans", sans-serif;
+    --body-color: #555855;
+    --text-heading-color: #222222;
+    --text-white: #FFFFFF;
+    --bg-white: #FFFFFF;
+    --primary-color-1: #FFBF43;
+    --color-1: #222222;
+    --color-2: #F8F7F0;
+    --color-3: #EBEBEB;
+    --color-4: #EAB342;
+    --color-5: #4B4A4A;
+    --color-6: #CCCCCC;
+    --color-7: #313131;
+    --color-8: #282828;
+    --border-color-1: #EEEDE8;
+    --border-color-2: #CDD0CD;
+    --border-color-3: #474644;
+}
+/*==========================================================================
+* Common Css
+==========================================================================*/
+body {
+	font-family: var(--body-font);
+	color: var(--body-color);
+	font-size: 18px;
+	line-height: 30px;
+  	font-weight: 400;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	transition: 0.4s;
+}
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+a,
+button,
+i {
+	text-decoration: none;
+	color: inherit;
+}
+a:focus,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+.section-padding {
+	padding: 120px 0px;
+}
+.section-padding-two {
+	padding: 120px 0 95px 0;
+}
+.section-padding-three {
+	padding: 95px 0 120px 0;
+}
+@media (max-width: 575px) {
+	.section-padding {
+		padding: 100px 0px;
+	}
+	.section-padding-two {
+		padding: 100px 0 75px 0;
+	}
+	.section-padding-three {
+		padding: 75px 0 100px 0;
+	}
+}
+.display-none {
+	display: none;
+}
+.display-block {
+	display: block;
+}
+.img_full {
+	width: 100%;
+}
+/*==========================================================================
+* Form CSS
+==========================================================================*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: var(--primary-color-1);
+	border-color: transparent;
+	border-radius: 5px;
+	color: var(--color-1);
+	padding: 17px 40px;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  	border-color: transparent;
+}
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  	border-color: transparent;
+}
+input[type="text"],
+input[type="file"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: var(--body-color);
+	border-radius: 6px;
+	width: 100%;
+	height: 60px;
+	background: var(--bg-white);
+	border: 1px solid var(--border-color-1);
+	padding: 0 15px;
+	font-size: 16px;
+	line-height: 26px;
+	&::placeholder {
+		color: var(--body-color);
+	}
+}
+input[type="text"]:focus,
+input[type="file"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: var(--body-color);
+	outline: none;
+	box-shadow: none;
+	border-color: var(--primary-color-1);
+}
+select {
+	border: 1px solid var(--border-color-1);
+}
+textarea {
+	width: 100%;
+	height: 150px;
+	padding-top: 15px;
+}
+button,
+button:hover,
+button:focus {
+	box-shadow: none;
+	border: none;
+	outline: none;
+}
+/*==========================================================================
+* Hedging CSS
+==========================================================================*/
+$list: (h1, 84px, 94px, 0, 0, var(--text-heading-color), var(--heading-font), 500),
+(h2, 56px, 66px, 0, 0, var(--text-heading-color), var(--heading-font), 500),
+(h3, 36px, 46px, 0, 0, var(--text-heading-color), var(--heading-font), 500),
+(h4, 28px, 38px, 0, 0, var(--text-heading-color), var(--heading-font), 500),
+(h5, 22px, 32px, 0, 0, var(--text-heading-color), var(--heading-font), 500),
+(h6, 18px, 28px, 0, 0, var(--text-heading-color), var(--heading-font), 500);
+@each $name, $size, $height, $p, $m, $color, $font, $weight in $list {
+    #{$name}{
+      font-size: $size;
+      line-height: $height;
+      padding: $p;
+      margin: $m;
+      color: $color;
+      font-family: $font;
+      font-weight: $weight;
+    }
+}
+p {
+	font-size: 18px;
+    line-height: 30px;
+    color: var(--body-color);
+    font-family: var(--body-font);
+}
+$list: left, center, right;
+@each $i in $list {
+    .t-#{$i} {
+        text-align: $i;
+    }
+}
+@media (max-width: 767px) {
+	h2 {
+        font-size: 34px;
+        line-height: 44px;
+	}
+	h3 {
+		font-size: 28px;
+		line-height: 38px;
+	}
+	h4 {
+		font-size: 22px;
+		line-height: 32px;
+	}
+}
+/*==========================================================================
+* Button CSS
+==========================================================================*/
+.build_button {
+	display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+    text-align: center;
+	overflow: hidden;
+    transition: 0.4s;
+	font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: var(--color-1);
+    background: var(--primary-color-1);
+    border-radius: 50px 50px 50px 50px;
+    padding: 8px 8px 8px 30px;
+    gap: 20px;
+	&::before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: var(--color-1);
+		transform-origin: 100% 50%;
+		transform: scale3d(1, 2, 1);
+		transition: transform 0.4s, opacity 0.4s;
+		transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+	}
+	i {
+		position: relative;
+		z-index: 2;
+		transition: 0.4s;
+		color: var(--color-1);
+		background: var(--color-4);
+		font-size: 26px;
+		width: 44px;
+		height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50px 50px 50px 50px;
+	}
+	&:hover {
+		color: var(--text-white);
+		i {
+			color: var(--text-white);
+			background: var(--color-5);
+			transform: rotate(45deg);
+		}
+		&::before {
+			transform: scale3d(10, 9, 1);
+			transform-origin: 103% 55%;
+		}
+	}
+}
+.more_btn {
+	font-family: var(--heading-font);
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 26px;
+	color: var(--text-heading-color);
+	transition: 0.4s;
+	display: inline-block;
+	i {
+		position: relative;
+		top: 4px;
+		font-size: 22px;
+		transition: 0.4s;
+		display: inline-flex;
+		gap: 4px;
+	}	
+	&:hover {
+		color: var(--primary-color-1);
+		i {
+			transform: rotate(45deg);
+		}
+	}
+}
+.subtitle {
+	color: var(--text-heading-color);
+    font-family: var(--heading-font);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+	margin-bottom: 15px;
+    padding: 7px 15px;
+	border: 1px solid var(--border-color-2);
+    border-radius: 50px;
+	display: inline-block;
+}
+@media (min-width: 992px) {
+	.columns_sticky {
+		position: sticky;
+		z-index: 99;
+		height: 100%;
+		top: 120px;
+	}
+}
+.card_sticky {
+    position: sticky;
+    z-index: 99;
+	top: var(--card-top);
+}
+/*==========================================================================
+* Scroll Top CSS
+==========================================================================*/
+.scroll-up {
+	cursor: pointer;
+	display: block;
+	border-radius: 50px;
+	box-shadow: inset  0 0 0 2px var(--color-3);
+	z-index: 10000;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(15px);
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	height: 50px;
+	width: 50px;
+    transition: all 200ms linear;
+	&::after {
+		position: absolute;
+		font-family: 'Font Awesome 5 Pro';
+		content: "\f176";
+		text-align: center;
+		line-height: 50px;
+		font-size: 24px;
+		color: var(--primary-color-1);
+		left: 0;
+		top: 0;
+		font-size: 20px;
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		display: block;
+		z-index: 1;
+		transition: all 200ms linear;
+	}
+	&.active-scroll {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+	svg path { 
+		fill: none; 
+	}
+	svg.scroll-circle path {
+		stroke: var(--primary-color-1);
+		stroke-width: 4;
+		box-sizing:border-box;
+		transition: all 200ms linear;
+	}
+}
+/*==========================================================================
+* Preloader CSS
+==========================================================================*/
+.theme-loader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: var(--color-1);
+	z-index: 9999999999;
+}
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: flex;
+}
+.spinner-bounce {
+	will-change: transform;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	background: var(--primary-color-1);
+	display: inline-block;
+	animation: bounces 1s ease-in-out infinite alternate;
+	transform-origin: 50% 50%;
+	&.one {
+		margin-right: 15px;
+	}
+	&.two {
+		margin-right: 15px;
+		animation-delay: .4s;
+	}
+	&.three {
+		animation-delay: .8s;
+	}
+}
+@keyframes bounces {
+	0% {
+		transform: scale(0.8);
+		background: var(--primary-color-1);
+	}
+	50% {
+		background: var(--primary-color-2);
+	}
+	100% {
+		transform: scale(.2);
+		background: var(--primary-color-3);
+	}
+}
+/*==========================================================================
+* Video Animation CSS
+==========================================================================*/
+.video {
+	position: relative;
+	text-align: center;
+	display: inline-block;
+	z-index: 4;
+	a {
+		position: relative;
+		background: var(--primary-color-1);
+		font-size: 20px;
+		z-index: 1;
+		color: var(--color-1);
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}          
+}
+.video-pulse::after, .video-pulse::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	border: 1px solid var(--bg-white);
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	animation-duration: 2.5s;
+	animation-timing-function: linear;
+	animation-name: video-animation;
+	animation-iteration-count: infinite;
+}
+.video-pulse::before {
+	animation-delay: 1s;
+}
+@keyframes video-animation {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(90deg);
+    }
+}
+@keyframes rollShape {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-359deg);
+	}
+}
+@keyframes rollIn {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+@keyframes bounce-y {
+    0% {        
+        transform: translateY(0);
+    }
+    50% {        
+        transform: translateY(-10px);
+    }
+    100% {        
+        transform: translateY(0);
+    }
+}
+@keyframes bounce-x {
+    0% {        
+        transform: translateX(0);
+    }
+    50% {        
+        transform: translateX(5px);
+    }
+    100% {        
+        transform: translateX(0);
+    }
+}
+.bounce_y {
+	animation: bounce-y 3s infinite linear;
+}
+.bounce_x {
+	animation: bounce-x 2s infinite linear;
+}
+.roll_in {
+    animation: rollShape 20s infinite linear;
+}
+.h_rotate:hover {
+    transform: rotate(45deg);
+}
+.slider-arrow {
+	display: flex;
+	gap: 10px;
+	i {
+		font-size: 24px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		color: var(--text-heading-color);
+		background: var(--bg-white);
+		transition: 0.4s;
+		border: 1px solid var(--border-color-1);
+		width: 60px;
+		height: 60px;
+		&:hover {
+			color: var(--color-1);
+			background: var(--primary-color-1);
+			border-color: var(--primary-color-1);
+		}
+	}
+}
+.slider-area {
+	position: relative;
+	z-index: 1;
+	.slider-arrow {
+		justify-content: space-between;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		transition: 0.4s;
+		visibility: hidden;
+		opacity: 0;
+		&-prev {
+			transform: translateX(-80px);
+			transition: 0.4s;
+		}
+		&-next {
+			transform: translateX(80px);
+			transition: 0.4s;
+		}
+	}
+	&:hover {
+		.slider-arrow {
+			visibility: visible;
+			opacity: 1;
+			&-prev {
+				transform: translateX(-110px);
+			}
+			&-next {
+				transform: translateX(110px);
+			}
+		}
+	}
+}
+
+.img_left_animation {
+    animation: left-animation 3000ms forwards cubic-bezier(0.40, 0.98, 0.52, 0.99);
+    opacity: 0
+}
+@keyframes left-animation {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1
+    }
+}
+.img_right_animation {
+    animation: right-animation 3000ms forwards cubic-bezier(0.40, 0.98, 0.52, 0.99);
+    opacity: 0
+}
+@keyframes right-animation {
+    0% {
+        clip-path: inset(0 0 0 100%);
+        opacity: 0
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1
+    }
+}
+.img_top_animation {
+    animation: top-animation 3000ms forwards cubic-bezier(0.40, 0.98, 0.52, 0.99);
+    opacity: 0
+}
+@keyframes top-animation {
+    0% {
+        clip-path: inset(0 0 100% 0);
+        opacity: 0
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1
+    }
+}
+.data_cursor {
+	cursor: none;
+}
+.cursor {
+    #cursor-ball {
+        width: 20px;
+        height: 20px;
+        background: var(--color-1);
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 999;
+        transition: width 0.4s ease, height 0.4s ease;
+    }
+    #cursor-text {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        opacity: 0;
+        z-index: 999;
+        display: grid;
+        place-items: center;
+        transition: opacity 300ms ease-in-out;
+        color: var(--text-white);
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+    }
+	&.no #cursor-text {
+		background: var(--color-1);
+		padding: 31px 21px;
+		border-radius: 50%;
+	}
+}

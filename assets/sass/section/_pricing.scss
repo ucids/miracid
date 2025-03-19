@@ -1,0 +1,99 @@
+/*==========================================================================
+* Pricing Css
+==========================================================================*/
+.price__area {
+    &-item {
+        padding: 40px;
+        border: 1px solid var(--border-color-2);
+        border-radius: 10px;
+        &-price {
+            span {
+                font-size: 18px;
+                line-height: 28px;
+                color: var(--body-color);
+            }
+            h2 {
+                margin-top: 15px;
+                font-size: 54px;
+                line-height: 64px;
+                span {
+                    margin-left: 20px;
+                }
+            }
+        }
+        &-list {
+            margin-top: 35px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color-2);
+            ul {
+                padding: 0;
+                margin: 0;
+                li {
+                    list-style: none;
+                    font-size: 18px;
+                    line-height: 30px;
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    i {
+                        color: var(--primary-color-1);
+                        font-size: 16px;
+                        margin-right: 6px;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+        &-btn {
+            margin-top: 50px;
+            .build_button {
+                border: 1px solid var(--border-color-2);
+                background: transparent;
+                color: var(--text-heading-color);
+                padding: 7px 7px 7px 29px;
+                &:hover {
+                    color: var(--text-white);
+                }
+            }
+        }
+        &.active {
+            background: var(--primary-color-1);
+            border-color: var(--primary-color-1);
+            .price__area-item {
+                &-price {
+                    h3,
+                    h2 {
+                        color: var(--color-1);
+                    }
+                }
+                &-list {
+                    border-color: #DDB348;
+                    ul li i {
+                        color: var(--color-1);
+                    }
+                }
+                &-btn .build_button {
+                    border-color: var(--color-1);
+                    background: var(--color-1);
+                    color: var(--text-white);
+                    i {
+                        color: var(--text-white);
+                        background: var(--color-5);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .price__area-item {
+        padding: 30px;
+        &-list ul li {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+}

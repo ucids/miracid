@@ -1,0 +1,45 @@
+/*==========================================================================
+* Skill Bar CSS
+==========================================================================*/
+.skill__area {
+    &-item {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &-content {
+            position: relative;
+        }
+        h6 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            font-family: var(--heading-font);
+            color: var(--text-heading-color);
+        }
+        &-bar {
+            height: 10px;
+            position: absolute;
+            width: 0;
+            top: 0;
+            left: 0;
+            background: var(--primary-color-1);
+            transition: all 3.5s ease-out 0s;
+        }
+        &-inner {
+            width: 100%;
+            height: 10px;
+            position: relative;
+            background: var(--color-2);
+            margin-top: 10px;
+        }
+    }
+}

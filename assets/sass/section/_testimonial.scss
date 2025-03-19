@@ -1,0 +1,86 @@
+/*==========================================================================
+* Testimonial One CSS
+==========================================================================*/
+.testimonial__one {
+    overflow: hidden;
+    &-item {
+        border: 1px solid var(--border-color-2);
+        padding: 50px;
+        border-radius: 10px;
+        background: var(--bg-white);
+        &-client {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            &-image {
+                img {
+                    width: 70px;
+                    height: 70px;
+                    max-width: 70px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+        }
+        p {
+            margin-top: 30px;
+            font-size: 27px;
+            line-height: 36px;
+            transition: 0.4s;
+        }
+        &-reviews {
+            margin-top: 30px;
+            i {
+                color: var(--primary-color-1);
+                transition: 0.4s;
+            }
+        }
+    }
+    &.page {
+        background: var(--color-2);
+        .testimonial__one-item {
+            background: transparent;
+        }
+    }
+}
+/*==========================================================================
+* Testimonial Two CSS
+==========================================================================*/
+.testimonial__two {
+    background: var(--color-2);
+    overflow: hidden;
+    .testimonial__one-item {
+        border-color: var(--border-color-1);
+        p {
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+    .testimonial_two_slide {
+        margin-right: -420px;
+    }
+}
+.testimonial__three {
+    .testimonial__one-item {
+        p {
+            margin: 15px 0 40px 0;
+            color: var(--text-heading-color);
+        }
+        &-reviews {
+            margin-top: 0;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .testimonial__two .testimonial_two_slide {
+        margin: 0 10px 0 10px;
+    }
+    .testimonial__two .testimonial__one-item,
+    .testimonial__one-item {
+        padding: 30px;
+        p {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}

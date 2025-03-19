@@ -1,0 +1,87 @@
+/*==========================================================================
+* Request Quote CSS
+==========================================================================*/
+.request__quote {
+    span {
+        color: var(--primary-color-1);
+    }
+    &-item {
+        label {
+            margin-bottom: 8px;
+        }
+    }
+    &-services {
+        label {
+            font-size: 14px;
+            display: block;
+            font-weight: 500;
+            color: var(--text-heading-color);
+        }
+    }
+    .description {
+        margin-top: 10px;
+    }
+}
+/*==========================================================================
+* Contact CSS
+==========================================================================*/
+.contact__area {
+    &-left {
+        &-contact {
+            margin-top: 45px;
+            &-item {
+                display: flex;
+                margin-bottom: 25px;
+                gap: 25px;
+                &-icon {
+                    i {
+                        font-size: 40px;
+                        margin-top: 5px;
+                    }
+                }
+                &-content {
+                    span {
+                        display: inline-block;
+                        font-size: 22px;
+                        line-height: 32px;
+                        font-weight: 500;
+                    }
+                    h6 {
+                        max-width: 240px;
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-weight: 400;
+                        font-family: var(--body-font);
+                        a {
+                            transition: 0.4s;
+                            &:hover {
+                                color: var(--primary-color-1);
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &-form {
+        background: var(--color-2);
+        padding: 70px;
+        border-radius: 10px;
+        h4 {
+            margin-bottom: 40px;
+        }
+    }
+}
+.map-area iframe {
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+@media (max-width: 767px) {
+    .contact__area-form {
+        padding: 30px 25px 30px 25px;
+    }
+}

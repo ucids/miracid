@@ -1,0 +1,282 @@
+/*==========================================================================
+* Choose Us Css
+==========================================================================*/
+.choose__us {
+    &-left {
+        position: relative;
+        img {
+            width: 75%;
+        }
+        &-counter {
+            text-align: left;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 25%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 78px 25px 87px 55px;
+            h2 {
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 64px;
+            }
+            p {
+                margin: 0;
+                font-size: 20px;
+                line-height: 26px;
+                max-width: 140px;
+                color: var(--text-heading-color);
+                
+            }
+        }
+    }
+    &-right {
+        .build_button {
+            background: var(--color-1);
+            color: var(--text-white);
+            i {
+                color: var(--text-white);
+                background: var(--color-5);
+            }
+            &::before {
+                background: var(--primary-color-1);                
+            }
+            &:hover {
+                color: var(--color-1);
+                i {
+                    color: var(--color-1);
+                    background: var(--color-4);
+                }
+            }
+        }
+    }
+}
+.choose__three {
+    background: var(--color-2);
+    &-left {
+        img {
+            object-fit: cover;
+            height: 490px;
+        }
+    }
+    &-list-item {
+        padding: 40px;
+        background: var(--bg-white);
+        border-radius: 10px;
+        box-shadow: 0 0 70px rgba(0, 0, 0, 0.05);
+        i {
+            display: inline-block;
+            font-size: 70px;
+            margin-bottom: 25px;
+        }
+        p {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .choose__three-list-item {
+        padding: 30px;
+    }
+}
+@media (max-width: 575px) {
+    .choose__us-left img {
+        width: 85%;
+        height: 440px;
+        object-fit: cover;
+    }
+    .choose__three-left img {
+        height: 380px;
+    }
+}
+.certification {
+    background: var(--color-2);
+}
+/*==========================================================================
+* Experience CSS
+==========================================================================*/
+.experience__area {
+    background: var(--color-1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &-title {
+        .subtitle {
+            border-color: #474644;
+            color: var(--text-white);
+        }
+        h2 {
+            color: var(--text-white);
+            max-width: 700px;
+        }
+    }
+    &-image {
+        margin-left: -160px;
+        position: relative;
+        z-index: -1;
+        img {
+            height: 642px;
+            object-fit: cover;
+        }
+    }
+    &-list-item {
+        background: var(--color-2);
+        border-radius: 12px;
+        padding: 40px;
+        i {
+            font-size: 70px;
+            display: inline-block;
+        }
+        &-content {
+            margin-top: 25px;
+            h4 {
+                font-size: 24px;
+                line-height: 32px;
+            }
+            p {
+                margin-top: 7px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .experience__area-image {
+        margin-left: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+/*==========================================================================
+* Industry One CSS
+==========================================================================*/
+.industry__area {
+    &-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    &-right {
+        &-list {
+            &-item {
+                display: flex;
+                align-items: start;
+                gap: 25px;
+                i {
+                    font-size: 70px;
+                    margin-top: 6px;
+                    color: var(--text-heading-color);
+                }
+                &-content {
+                    p {
+                        margin-bottom: 0;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*==========================================================================
+* Industry Two CSS
+==========================================================================*/
+.industry__four {
+    &-left {
+        &-item {
+            &.borders {
+                border-right: 1px solid var(--border-color-2);
+            }
+            img {
+                max-width: 70px;
+                margin-bottom: 18px;
+            }
+            h5 {
+                font-size: 24px;
+                line-height: 34px;
+                margin-bottom: 5px;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-right {
+        p {
+            max-width: 540px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .industry__four-left-item.borders {
+        border-right: 0;
+    }
+    .industry__four-right p {
+        max-width: 100%;
+    }
+}
+/*==========================================================================
+* Experience CSS
+==========================================================================*/
+.text__slide {
+    background: var(--color-1);
+    &-title {
+        .subtitle {
+            border-color: #474644;
+            color: var(--text-white);
+        }
+        h2 {
+            color: var(--text-white);
+            max-width: 550px;
+        }
+    }
+    &-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-counter {
+            width: 170px;
+            height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2 {
+                color: var(--text-white);
+                font-size: 44px;
+                line-height: 54px;                
+            }
+        }
+    }
+    .scroll__slider {
+        margin-top: -70px;
+        ul li {
+            align-items: center;
+            img {
+                width: 45px;
+                height: 45px;
+            }
+            a {
+                font-size: 60px;
+                line-height: 70px;
+                color: var(--text-white);
+                font-weight: 500;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .text__slide-right {
+        &-counter {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
