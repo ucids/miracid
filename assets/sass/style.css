@@ -2988,7 +2988,7 @@ p {
 ==========================================================================*/
 .header__area {
   padding: 20px 0;
-  background: var(--primary-color-1);
+  background: #fffdf0;
   border-bottom: 1px solid #E5B142;
 }
 .header__area-menubar {
@@ -3945,9 +3945,9 @@ p {
   color: var(--text-white);
 }
 .banner__four-content h1 {
-  font-size: 150px;
-  line-height: 160px;
-  font-weight: 600;
+  font-size: 80px;
+  /* line-height: 120px;
+  font-weight: 500; */
   color: var(--text-white);
   text-transform: uppercase;
 }
