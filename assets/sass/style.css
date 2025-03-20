@@ -3977,7 +3977,7 @@ p {
 }
 .banner__four-brand .scroll__slider {
   margin-right: -260px;
-  padding: 85px 0;
+  padding: 5px 0;
   background: var(--color-2);
   border-left: 1px solid var(--border-color-2);
 }
@@ -3986,8 +3986,9 @@ p {
   overflow: hidden;
 }
 .banner__four-brand .scroll__slider ul li img {
-  filter: invert(1);
-  max-width: inherit;
+  /* filter: invert(1); */
+  max-width: 150px;
+  max-height: 30%;;
 }
 
 @media (max-width: 1350px) {
@@ -6397,6 +6398,7 @@ p {
 }
 .scroll__slider ul li {
   display: inline-flex;
+  margin-top: 5rem;
 }
 .scroll__slider ul li img {
   margin: 0 50px;
@@ -6423,7 +6425,7 @@ p {
 }
 
 .text_scroll {
-  animation: scroll 40s linear infinite;
+  animation: scroll 70s linear infinite;
   animation-direction: reverse !important;
 }
 
@@ -6444,7 +6446,7 @@ p {
 
 @media (max-width: 767px) {
   .scroll__slider ul li a {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 50px;
   }
@@ -7680,6 +7682,8 @@ p {
 .dark-mode .banner__four-brand .scroll__slider ul li img,
 .dark-mode .brand__area ul li img {
   filter: inherit;
+  max-height: 20%;
+  max-width: 20%;
 }
 .dark-mode .industry__four-left-item img {
   filter: invert(1);
