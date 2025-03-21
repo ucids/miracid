@@ -3987,8 +3987,8 @@ p {
 }
 .banner__four-brand .scroll__slider ul li img {
   /* filter: invert(1); */
-  max-width: 150px;
-  max-height: 30%;;
+  max-width: 190px;
+  max-height: 40%;;
 }
 
 @media (max-width: 1350px) {
@@ -6425,7 +6425,7 @@ p {
 }
 
 .text_scroll {
-  animation: scroll 70s linear infinite;
+  animation: scroll 90s linear infinite;
   animation-direction: reverse !important;
 }
 
