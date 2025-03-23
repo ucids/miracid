@@ -5630,19 +5630,27 @@ p {
   height: 490px;
 }
 .choose__three-list-item {
+  color: #FFFFFF;
   padding: 40px;
-  background: #5bb9f7ab;
+  background: #307094;
   border-radius: 10px;
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.05);
+  
 }
 .choose__three-list-item i {
   display: inline-block;
   font-size: 70px;
   margin-bottom: 25px;
+  color: #ee980d;
+}
+.choose__three-list-item h4 {
+  color: #ee980d;
 }
 .choose__three-list-item p {
   margin-bottom: 0;
   margin-top: 10px;
+  color: #FFFFFF;
+
 }
 
 @media (max-width: 1199px) {
