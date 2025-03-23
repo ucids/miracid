@@ -3945,7 +3945,7 @@ p {
   color: var(--text-white);
 }
 .banner__four-content h1 {
-  font-size: 80px;
+  font-size: 60px;
   /* line-height: 120px;
   font-weight: 500; */
   color: var(--text-white);
@@ -3978,7 +3978,7 @@ p {
 .banner__four-brand .scroll__slider {
   margin-right: -260px;
   padding: 5px 0;
-  background: var(--color-2);
+  background: #DFE4E4;
   border-left: 1px solid var(--border-color-2);
 }
 .banner__four-brand .scroll__slider .text-slide {
@@ -4001,8 +4001,10 @@ p {
     line-height: 105px;
   }
   .banner__four-content h1 {
-    font-size: 130px;
-    line-height: 140px;
+    font-size: 60px;
+    line-height: 110px;
+    text-align: center;
+
   }
 }
 @media (max-width: 1199px) {
@@ -5632,7 +5634,7 @@ p {
 .choose__three-list-item {
   color: #FFFFFF;
   padding: 40px;
-  background: #307094;
+  background: #1D4359;
   border-radius: 10px;
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.05);
   
@@ -5641,10 +5643,10 @@ p {
   display: inline-block;
   font-size: 70px;
   margin-bottom: 25px;
-  color: #ee980d;
+  color: #FEFFE0;
 }
 .choose__three-list-item h4 {
-  color: #ee980d;
+  color: #FEFFE0;
 }
 .choose__three-list-item p {
   margin-bottom: 0;
