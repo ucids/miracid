@@ -2988,8 +2988,8 @@ p {
 ==========================================================================*/
 .header__area {
   padding: 20px 0;
-  background: #fffdf0;
-  border-bottom: 1px solid #E5B142;
+  background: #ffffff;
+  /* border-bottom: 1px solid #E5B142; */
 }
 .header__area-menubar {
   display: flex;
@@ -7031,7 +7031,7 @@ p {
 * Services Four CSS
 ==========================================================================*/
 .services__four {
-  background: var(--color-1);
+  background: #DFE4E4;
   overflow: hidden;
 }
 .services__four-title .subtitle {
@@ -7039,7 +7039,7 @@ p {
   color: var(--text-white);
 }
 .services__four-title h2 {
-  color: var(--text-white);
+  color: #07395A;
 }
 .services__four-title .build_button::before {
   background: var(--bg-white);
@@ -7055,7 +7055,7 @@ p {
   margin-right: -295px;
 }
 .services__four .services__one-item {
-  background: var(--color-1);
+  background: #1D4359;
   border-color: var(--border-color-3);
 }
 .services__four .services__one-item > i {
