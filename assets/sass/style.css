@@ -5631,7 +5631,7 @@ p {
 }
 .choose__three-list-item {
   padding: 40px;
-  background: var(--bg-white);
+  background: #5bb9f7ab;
   border-radius: 10px;
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.05);
 }
