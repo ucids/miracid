@@ -90,19 +90,19 @@ END TABLE OF CONTENTS
 :root {
   --body-font: "DM Sans", sans-serif;
   --heading-font: "Instrument Sans", sans-serif;
-  --body-color: #555855;
-  --text-heading-color: #222222;
+  --body-color: #000000;
+  --text-heading-color: #063769;
   --text-white: #FFFFFF;
   --bg-white: #FFFFFF;
   --primary-color-1: #ee980d;
-  --color-1: #222222;
+  --color-1: #000000;
   --color-2: #FFFFFF;
   --color-3: #EBEBEB;
   --color-4: #f1cb04;
   --color-5: #4B4A4A;
   --color-6: #CCCCCC;
   --color-7: #313131;
-  --color-8: #282828;
+  --color-8: #063769;
   --border-color-1: #EEEDE8;
   --border-color-2: #CDD0CD;
   --border-color-3: #474644;
@@ -3051,7 +3051,7 @@ p {
   display: none;
 }
 .header__area-menubar-center-menu ul li .sub-menu li > a {
-  border-bottom: 1px solid var(--border-color-3);
+  border-bottom: 1px solid var(--primary-color-1);
   color: var(--text-white);
   padding: 12px 0;
   transition: 0.4s;
@@ -3204,7 +3204,7 @@ p {
   animation: rotate 0.4s ease 0s;
 }
 .header__area-menubar-right-btn.one .build_button {
-  background: var(--color-1);
+  background: var(--color-8);
   color: var(--text-white);
 }
 .header__area-menubar-right-btn.one .build_button i {
@@ -5638,7 +5638,7 @@ p {
 .choose__three-list-item {
   color: #FFFFFF;
   padding: 40px;
-  background: #1D4359;
+  background: #063769;
   border-radius: 10px;
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.05);
   
@@ -5647,10 +5647,10 @@ p {
   display: inline-block;
   font-size: 70px;
   margin-bottom: 25px;
-  color: #FEFFE0;
+  color: #72EDFD;
 }
 .choose__three-list-item h4 {
-  color: #FEFFE0;
+  color: #72EDFD;
 }
 .choose__three-list-item p {
   margin-bottom: 0;
@@ -5795,16 +5795,18 @@ p {
 * Experience CSS
 ==========================================================================*/
 .text__slide {
-  background: var(--color-1);
+  background: #DFE4E4;
+  color: var(--color-1);
 }
 .text__slide-title .subtitle {
   border-color: #474644;
   color: var(--text-white);
 }
 .text__slide-title h2 {
-  color: var(--text-white);
+  color: var(--text-heading-color);
   max-width: 550px;
 }
+
 .text__slide-right {
   display: flex;
   align-items: center;
@@ -5827,6 +5829,7 @@ p {
 }
 .text__slide .scroll__slider ul li {
   align-items: center;
+  color: var(--text-white)  ;
 }
 .text__slide .scroll__slider ul li img {
   width: 45px;
@@ -5837,6 +5840,12 @@ p {
   line-height: 70px;
   color: var(--text-white);
   font-weight: 500;
+}
+.text__slide .scroll__slider ul li img {
+  max-width: 350px; /* Ajusta según sea necesario */
+  max-height: 350px;
+  width: auto; /* Mantiene la proporción original */
+  height: auto;
 }
 
 @media (max-width: 575px) {
@@ -7043,7 +7052,7 @@ p {
   color: var(--text-white);
 }
 .services__four-title h2 {
-  color: #07395A;
+  color: #063769;
 }
 .services__four-title .build_button::before {
   background: var(--bg-white);
@@ -7059,11 +7068,11 @@ p {
   margin-right: -295px;
 }
 .services__four .services__one-item {
-  background: #1D4359;
+  background: #063769;
   border-color: var(--border-color-3);
 }
 .services__four .services__one-item > i {
-  color: #FEFFE0;
+  color: #72EDFD;
 }
 .services__four .services__one-item .more_btn,
 .services__four .services__one-item h4 {
