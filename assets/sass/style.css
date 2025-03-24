@@ -97,10 +97,10 @@ END TABLE OF CONTENTS
   --primary-color-1: #ee980d;
   --color-1: #000000;
   --color-2: #FFFFFF;
-  --color-3: #EBEBEB;
+  --color-3: #DFE4E4;
   --color-4: #f1cb04;
   --color-5: #4B4A4A;
-  --color-6: #CCCCCC;
+  --color-6: #DFE4E4;
   --color-7: #313131;
   --color-8: #063769;
   --border-color-1: #EEEDE8;
@@ -3235,7 +3235,7 @@ p {
   overflow: auto;
   transform: translateX(100%);
   top: 0;
-  background: var(--color-1);
+  background: var(--color-6);
   opacity: 0;
   visibility: hidden;
   z-index: 999999;
@@ -6077,11 +6077,14 @@ p {
 * Footer Four CSS
 ==========================================================================*/
 .footer__four {
-  background: var(--color-2);
+  background: var(--color-3);
 }
 .footer__four-area {
   padding-top: 100px;
   padding-bottom: 120px;
+}
+.footer__four-area a:hover {
+  color: var(--primary-color-1);
 }
 .footer__four-widget .logo {
   display: block;
