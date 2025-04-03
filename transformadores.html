@@ -1,356 +1,432 @@
-<style>
-    /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
-
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --header-height: 3.5rem;
-
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: #DFE4E4;
-  --text-color: hsl(38, 8%, 8%);
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Space Grotesk', sans-serif;
-  --biggest-font-size: 2.375rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
-}
-
-/* Responsive typography */
-@media screen and (min-width: 1024px) {
-  :root {
-    --biggest-font-size: 5rem;
-    --normal-font-size: 1rem;
-    --smaller-font-size: .813rem;
-  }
-}
-
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: 500;
-  color: var(--text-color);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1024px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.main {
-  overflow: hidden; /* For the animations ScrollReveal */
-}
-
-/*=============== HEADER & NAV ===============*/
-.header {
-  position: fixed;
-  width: 100%;
-  background-color: transparent;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.nav {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__logo, 
-.nav__toggle {
-  color: var(--text-color);
-  display: inline-flex;
-}
-
-.nav__logo {
-  font-weight: 700;
-}
-
-.nav__toggle {
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    background-color: var(--first-color);
-    left: 0;
-    top: -100%;
-    width: 100%;
-    padding: 5rem 0 4rem;
-    border-radius: 0 0 1.5rem 1.5rem;
-    box-shadow: 0 2px 4px hsla(38, 4%, 15%, .15);
-    transition: .4s;
-  }
-}
-
-.nav__list {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-}
-
-.nav__link {
-  color: var(--text-color);
-}
-
-.nav__close {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 1.5rem;
-  color: var(--text-color);
-  cursor: pointer;
-}
-
-/* Show menu */
-.show-menu {
-  top: 0;
-}
-
-/*=============== HOME ===============*/
-.home {
-  background-color: var(--first-color);
-  padding: 9rem 0 2rem;
-  height: 100vh;
-  display: grid;
-}
-
-.home__container {
-  display: grid;
-  align-content: center;
-  row-gap: 2.5rem;
-}
-
-.home__data {
-  text-align: center;
-}
-
-.home__title {
-  font-size: var(--biggest-font-size);
-  margin: .75rem 0;
-}
-
-.home__button {
-  margin-top: 2rem;
-  display: inline-block;
-  background-color: var(--text-color);
-  color: #fff;
-  padding: .80rem 1.5rem;
-  border-radius: 3rem;
-  transition: .4s;
-}
-
-.home__button:hover {
-  box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
-}
-
-.home__img img {
-  width: 230px;
-  animation: floaty 1.8s infinite alternate;
-}
-
-.home__img {
-  justify-self: center;
-}
-
-.home__shadow {
-  width: 130px;
-  height: 24px;
-  background-color: hsla(38, 21%, 19%, .16);
-  margin: 0 auto;
-  border-radius: 50%;
-  filter: blur(7px);
-  animation: shadow 1.8s infinite alternate;
-}
-
-.home__footer {
-  display: flex;
-  justify-content: center;
-  column-gap: .5rem;
-  font-size: var(--smaller-font-size);
-  align-self: flex-end;
-}
-
-/* Animate ghost */
-@keyframes floaty {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(15px);
-  }
-}
-
-@keyframes shadow {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(.85, .85);
-  }
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 320px) {
-  .home {
-    padding-top: 7rem;
-  }
-}
-
-/* For medium devices */
-@media screen and (min-width: 767px) {
-  .nav {
-    height: calc(var(--header-height) + 1.5rem);
-  }
-  .nav__toggle, 
-  .nav__close {
-    display: none;
-  }
-  .nav__list {
-    flex-direction: row;
-    column-gap: 3.5rem;
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1024px) {
-  .home__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 2rem;
-  }
-  .home__data {
-    text-align: initial;
-  }
-  .home__img img {
-    width: 400px;
-  }
-  .home__shadow {
-    width: 250px;
-    height: 40px;
-  }
-}
-
-@media screen and (min-width: 1048px) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
-@media screen and (min-width: 2048px) {
-  body {
-    zoom: 1.7;
-  }
-
-  .home {
-    height: initial;
-    row-gap: 4rem;
-  }
-}
-
-/* For 4K resolutions (3840 x 2160, 4096 x 2160) */
-@media screen and (min-width: 3840px) {
-  body {
-    zoom: 3.1;
-  }
-}
-</style>
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-        <!--=============== BOXICONS ===============-->
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<head>
+  <!-- Start Meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Miracid" />
+  <meta name="keywords" content="Creative, Digital, multipage, landing, freelancer template" />
+  <meta name="author" content="ThemeOri">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Title of Site -->
+  <title>Miracid</title>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <!-- Flaticon -->
+  <link rel="stylesheet" href="assets/font/flaticon_flexitype.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- Magnific -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/sass/style.css">
+</head>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+<body>
+  <!-- Preloader start -->
+  <div class="theme-loader">
+    <div class="spinner">
+      <div class="spinner-bounce one"></div>
+      <div class="spinner-bounce two"></div>
+      <div class="spinner-bounce three"></div>
+    </div>
+  </div>
+  <!-- Preloader end -->
+  <div class="cursor">
+    <div class="hide">
+      <div id="cursor-ball"></div>
+    </div>
+    <div id="cursor-text"></div>
+  </div>
+  <!-- Dark Light Start -->
+  <div class="switch__tab">
+    <div class="switch__tab-icon">
+      <div class="switch__tab-open"><i class="fa-sharp fa-light fa-gear"></i></div>
+      <div class="switch__tab-close"><i class="fal fa-times"></i></div>
+    </div>
+    <div class="switch__tab-area">
+      <div class="switch__tab-area-item">
+        <h5>Mode</h5>
+        <div class="switch__tab-area-item-button type-dark-mode">
+          <button class="active" data-mode="light">light</button>
+          <button data-mode="dark-mode">dark</button>
+        </div>
+      </div>
+      <div class="switch__tab-area-item">
+        <h5>Custom Cursor</h5>
+        <div class="switch__tab-area-item-buttons" id="cursor_style">
+          <button data-cursor="1" class="active">Yes</button>
+          <button data-cursor="2">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dark Light End -->
+  <!-- Header Area Start -->
+  <div class="header__area">
+    <div class="custom_container">
+      <div class="header__area-menubar">
+        <div class="header__area-menubar-left one">
+          <div class="header__area-menubar-left-logo">
+            <a href="index.html"><img src="assets/img/logo_full.png" alt="logo"></a>
+          </div>
+        </div>
+        <div class="header__area-menubar-center">
+          <div class="header__area-menubar-center-menu">
+            <ul id="mobilemenu">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li class="menu-item-has-children"><a href="#">Productos a Medida</a>
+                <ul class="sub-menu">
+                  <li><a href="transformadores.html">Transformadores</a></li>
+                  <li><a href="luminarias.html">Luminarias</a></li>
+                  <li><a href="conductores.html">Conductores Eléctricos</a></li>
+                  <li><a href="aisladores.html">Aisladores Eléctricos</a></li>
+                  <li><a href="catalogo.html">Catálogo de Distribución</a></li>
+                  <li><a href="renta.html">Renta de Equipos</a></li>
+                  <li class="menu-item-has-children"><a href="#">HVLS</a>
+                    <ul class="sub-menu">
+                      <li><a href="kale.html">Kale Fans</a></li>
+                      <li><a href="vento.html">Big Vento</a></li>
+                      <li><a href="ass.html">Big Ass Fans</a></li>
+                      <li><a href="evaporativos.html">Equipos Evaporativos</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="extracion.hmtl">Extracción & Inyección</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children"><a href="#">Servicio</a>
+                <ul class="sub-menu">
+                  <li><a href="mantenimiento.html">Mantenimiento</a></li>
+                  <li><a href="codigo_red.html">Codigo de red</a></li>
+                  <li><a href="estudios.html">Estudios</a></li>
+                  <li><a href="instalacion.html">Instalación</a></li>
+                  <li><a href="construccion.html">Construcción</a></li>
+                  <li><a href="proyectos.html">Proyectos Ejecutados</a></li>
 
-        <title>Under Construction</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header">
-            <nav class="nav container">
-                <a href="index.html" class="nav__logo">
-                    Miracid.
-                </a>
 
-                <!-- Toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-grid-alt'></i>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contacto</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="header__area-menubar-right">
+          <!-- <div class="header__area-menubar-right-search">
+						<div class="search">	
+							<span class="header__area-menubar-right-search-icon open"><i class="fal fa-search"></i></span>
+						</div>
+					</div> -->
+          <div class="header__area-menubar-right-btn one">
+            <div class="item_bounce">
+              <a class="build_button" href="contact.html">Cotiza con Nosotros<i class="flaticon-right-up"></i></a>
+            </div>
+          </div>
+          <div class="header__area-menubar-right-responsive-menu menu__bar">
+            <i class="flaticon-menu-3"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header Area End -->
+  <!-- Breadcrumb Area Start -->
+  <div class="breadcrumb__area" style="background-image: url('assets/img/portfolio/transformers.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="breadcrumb__area-content">
+            <h2>Transformadores</h2>
+            <ul>
+              <li><a href="index.html">Inicio</a><i class="fa-regular fa-angle-right"></i></li>
+              <li>Transformadores</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Breadcrumb Area End -->
+  <!-- Portfolio Details Area Start -->
+  <div class="mission__area section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 lg-mb-25">
+          <div class="mission__area-left mr-40 xl-mr-0">
+            <h2 class="title_split_anim">Distribuidores en transformadores</h2>
+            <br>
+            <p>Nuestros técnicos podrán apoyarte en la asesoría necesaria en el mantenimiento de limpieza, remplazo o a
+              conseguir cualquier transformador sin importar la marca y capacidad.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="mission__area-right">
+            <div class="row">
+              <div class="col-md-6 md-mb-25 wow fadeInUp" data-wow-delay=".6s">
+                <div class="experience__area-list-item">
+                  <i class="flaticon-team"></i>
+                  <div class="experience__area-list-item-content">
+                    <h4>Proyectos llave en mano</h4>
+                  </div>
                 </div>
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home">
-                <div class="home__container container">
-                    <div class="home__data">
-                        <!-- <span class="home__subtitle">Miracid</span> -->
-                        <h1 class="home__title">Gracias por su Paciencia</h1>
-                        <p class="home__description">
-                            Estamos en Construcción <br> Espera Grandes cosas pronto
-                        </p>
-                        <a href="#" class="home__button">
-                            Ir al Inicio
-                        </a>
-                    </div>
-
-                    <div class="home__img">
-                        <img src="assets/img/logo_full.png" alt="">
-                        <div class="home__shadow"></div>
-                    </div>
+              </div>
+              <div class="col-md-6 wow fadeInUp" data-wow-delay=".9s">
+                <div class="experience__area-list-item">
+                  <i class="flaticon-technology"></i>
+                  <div class="experience__area-list-item-content">
+                    <h4>Garantia</h4>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog__details-area-tag">
+        <h5>Nuestro Alncance de Ventas :</h5>
+        <div class="all__sidebar-item-tag">
+          <ul>
+            <li><a href="#">Industria</a></li>
+            <li><a href="#">Instaladores</a></li>
+            <li><a href="#">Reventa</a></li>
+            <li><a href="#">Servicio Público</a></li>
+            <li><a href="#">Usuario Final</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Marcas -->
+      <div class="team__area section-padding">
+        <div class="container">
+          <div class="row mb-35">
+            <div class="col-xl-12">
+              <div class="team__area-title t-center">
+                <h2 class="title_split_anim">Productos</h2>
+              </div>
+            </div>
+            <!-- Carrousel Marcas -->
+            <div class="brand__area section-padding pb-0">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-12 scroll__slider">
+                    <div class="text-slide">
+                      <div class="sliders text_scroll">
+                        <ul>
+                          <li><img src="assets/img/logos/zetrak-.png" alt="image"></li>
+                          <li><img src="assets/img/logos/prolec-.png" alt="image"></li>
+                          <li><img src="assets/img/logos/continenn.png" alt="image"></li>
+                          <li><img src="assets/img/logos/iusa-.png" alt="image"></li>
+                          <li><img src="assets/img/logos/RTE-removebg-preview.png" alt="image"></li>
+                        </ul>
+                      </div>
+                      <div class="sliders text_scroll">
+                        <ul>
+                          <li><img src="assets/img/logos/zetrak-.png" alt="image"></li>
+                          <li><img src="assets/img/logos/prolec-.png" alt="image"></li>
+                          <li><img src="assets/img/logos/continenn.png" alt="image"></li>
+                          <li><img src="assets/img/logos/iusa-.png" alt="image"></li>
+                          <li><img src="assets/img/logos/RTE-removebg-preview.png" alt="image"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end Carrousel -->
+          </div>
+          <div class="price__area section-padding">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-4 col-md-6 xl-mb-25 wow fadeInUp" data-wow-delay=".4s">
+                  <div class="price__area-item">
+                    <div class="price__area-item-price">
+                      <center><h3>Tipo Pedestal</h3></center>
+                    </div>
+                    <div class="price__area-item-list">
+                      <img src="assets/img/transformadores/tipo_pedestal-removebg-preview.png" alt="">
+                      <p>Transformadores en monofásicos o trifásicos, requeridos en redes eléctricas de distribución subterránea.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 xl-mb-25 wow fadeInUp" data-wow-delay=".4s">
+                  <div class="price__area-item">
+                    <div class="price__area-item-price">
+                      <center><h3>Transformadores Tipo Estacion</h3></center>
+                    </div>
+                    <div class="price__area-item-list">
+                      <img src="assets/img/transformadores/tipo_estacion-removebg-preview.png" alt="">
+                      <p>Equipos suministrados en monofásicos o trifásicos con gargantas o sin gargantas, requeridos en redes eléctricas con alto voltaje.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 xl-mb-25 wow fadeInUp" data-wow-delay=".4s">
+                  <div class="price__area-item">
+                    <div class="price__area-item-price">
+                      <center><h3>Transformadores Tipo Poste</h3></center>
+                    </div>
+                    <div class="price__area-item-list">
+                      <center><img src="assets/img/transformadores/trasformador_tipo_poste.png" alt=""></center>
+                      <p>Equipos con capacidad monofásica y trifásica en sector público y privado.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 xl-mb-25 wow fadeInUp" data-wow-delay=".4s">
+                  <div class="price__area-item">
+                    <div class="price__area-item-price">
+                      <center><h3>Transformadores Tipo Sumergible</h3></center>
+                    </div>
+                    <div class="price__area-item-list">
+                      <img src="assets/img/transformadores/sumergible-monofasico-2-removebg-preview.png" alt="">
+                      <p>Equipos en monofásico y trifásico para limpieza visual y seguridad.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 xl-mb-25 wow fadeInUp" data-wow-delay=".4s">
+                  <div class="price__area-item">
+                    <div class="price__area-item-price">
+                      <center><h3>Tipo Seco</h3></center>
+                    </div>
+                    <div class="price__area-item-list">
+                      <center><img src="assets/img/transformadores/tipo_seco-removebg-preview.png" alt=""></center>
+                      <p>Transformadores monofásico y trifásico para aumentar o disminuir el voltaje</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Marcas -->
+    </div>
 
-                <footer class="home__footer">
-                    <!-- <span>(484) 370-9357</span>
-                    <span>|</span>
-                    <span>@ucid</span> -->
-                </footer>
-            </section>
-        </main>
+  </div>
+  <!-- Portfolio Details Area End -->
+  <!-- Footer Area Start -->
+  <div class="footer__four">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="footer__four-area">
+            <div class="row">
+              <div class="col-lg-4 col-sm-6">
+                <div class="footer__four-widget mr-40">
+                  <a class="logo" href="index.html"><img src="assets/img/logo-3.png" alt="logo"></a>
+                  <h5>We’re Solutions for all construction</h5>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 sm-mt-30">
+                <div class="footer__four-widget address">
+                  <h4>Address</h4>
+                  <div class="footer__four-widget-address">
+                    <h6><a href="https://www.google.com/maps">3891 Ranch view Richardson, California
+                        62639</a></h6>
+                    <h4><a href="tel:+123%20(256)%20568%2058">+123 (256) 568 58</a></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 lg-mt-30">
+                <div class="footer__four-widget ml-40 lg-ml-0">
+                  <h4>Quick links</h4>
+                  <div class="footer-widget-menu">
+                    <ul>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="blog-grid-three.html">Blog</a></li>
+                      <li><a href="testimonial.html">Testimonials</a></li>
+                      <li><a href="contact-two.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6 lg-mt-30">
+                <div class="footer__four-widget address">
+                  <h4>Support</h4>
+                  <div class="footer-widget-menu">
+                    <ul>
+                      <li><a href="contact-two.html">Term & Conditions</a></li>
+                      <li><a href="contact-two.html">Privacy policy</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Area End -->
+  <!-- Copyright Area Start -->
+  <div class="copyright__area four">
+    <div class="container">
+      <div class="row al-center">
+        <div class="col-md-7">
+          <div class="copyright__area-content md-t-center md-mb-10">
+            <p>Copyright 2024 – All Rights Reserved By <a href="https://themeforest.net/user/themeori/portfolio"
+                target="_blank">ThemeOri</a></p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="copyright__area-social t-right md-t-center">
+            <ul>
+              <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+              <li><a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
+              <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright Area End -->
+  <!-- Scroll Btn Start -->
+  <div class="scroll-up scroll-one">
+    <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Scroll Btn End -->
+  <!-- Main JS -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Counter up -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!-- Popper JS -->
+  <script src="assets/js/popper.min.js"></script>
+  <!-- Progressbar JS -->
+  <script src="assets/js/progressbar.min.js"></script>
+  <!-- Magnific JS -->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Waypoints JS -->
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <!-- Isotope JS -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <!-- WOW Js -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- Gsap Js -->
+  <script src="assets/js/gsap.js"></script>
+  <!-- Scroll Trigger Js -->
+  <script src="assets/js/scroll-trigger.js"></script>
+  <!-- Split Text Js -->
+  <script src="assets/js/split-text.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/custom.js"></script>
+</body>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src="assets/js/scrollreveal.min.js"></script>
-
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
 </html>
