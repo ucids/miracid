@@ -5491,6 +5491,7 @@ p {
   padding: 40px;
   border: 1px solid var(--border-color-2);
   border-radius: 10px;
+  background-color: var(--color-3);
 }
 .price__area-item-price span {
   font-size: 18px;
@@ -6467,9 +6468,6 @@ p {
   100% {
     transform: translateX(-100%);
   }
-}
-.brand__area {
-  background: var(--color-2);
 }
 .brand__area ul li img {
   max-width: 200px;
