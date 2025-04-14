@@ -5710,13 +5710,14 @@ p {
      object-fit: cover;
 }
 .experience__area-list-item {
-  background: var(--color-2);
+  background: var(--color-8);
   border-radius: 12px;
   padding: 40px;
 }
 .experience__area-list-item i {
   font-size: 70px;
   display: inline-block;
+  color: #72EDFD;
 }
 .experience__area-list-item-content {
   margin-top: 25px;
@@ -5724,6 +5725,7 @@ p {
 .experience__area-list-item-content h4 {
   font-size: 24px;
   line-height: 32px;
+  color: var(--text-white);
 }
 .experience__area-list-item-content p {
   margin-top: 7px;
