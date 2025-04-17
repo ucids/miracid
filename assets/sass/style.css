@@ -6765,6 +6765,7 @@ p {
 }
 
 .four__columns .portfolio__four-item {
+  background: var(--border-color-1);
   position: relative;
   z-index: 1;
 }
@@ -6789,7 +6790,7 @@ p {
 .four__columns .portfolio__four-item img {
   height: 380px;
   -o-object-fit: cover;
-     object-fit: cover;
+     object-fit: scale-down;
   border-radius: 10px;
 }
 .four__columns .portfolio__four-item-content {
@@ -6805,7 +6806,7 @@ p {
 }
 .four__columns .portfolio__four-item-content span,
 .four__columns .portfolio__four-item-content h5 {
-  color: var(--text-white);
+  color: var(--primary-color-1);
 }
 .four__columns .portfolio__four-item-content span a:hover,
 .four__columns .portfolio__four-item-content h5 a:hover {
