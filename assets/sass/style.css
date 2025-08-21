@@ -6457,7 +6457,7 @@ p {
 }
 
 .text_scroll {
-  animation: scroll 90s linear infinite;
+  animation: scroll 50s linear infinite;
   animation-direction: reverse !important;
 }
 
