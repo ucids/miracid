@@ -5831,7 +5831,8 @@ p {
   line-height: 54px;
 }
 .text__slide .scroll__slider {
-  margin-top: -70px;
+  margin-top: 10px;
+  margin-bottom: 90px;
 }
 .text__slide .scroll__slider ul li {
   align-items: center;
@@ -6478,7 +6479,7 @@ p {
 }
 
 .text_scroll {
-  animation: scroll 50s linear infinite;
+  animation: scroll 90s linear infinite;
   animation-direction: reverse !important;
 }
 
