@@ -6452,8 +6452,29 @@ p {
   -webkit-text-stroke-width: 1px;
 }
 
+.scroll__slider ul li {
+  position: relative;
+  /* Needed for z-index on hover */
+}
+
+.scroll__slider ul li img {
+  margin: 0 50px;
+  transition: 
+    transform 0.4s cubic-bezier(.25,.8,.25,1),
+    box-shadow 0.4s,
+    filter 0.4s;
+  z-index: 1;
+}
+
+.scroll__slider ul li img:hover {
+  transform: scale(1.55);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+  filter: brightness(1.08) contrast(1.05);
+  z-index: 2;
+}
 .sliders {
   flex-shrink: 0;
+  
 }
 
 .text_scroll {
