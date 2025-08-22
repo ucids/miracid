@@ -5874,7 +5874,7 @@ p {
   border-bottom: 1px solid var(--border-color-3);
 }
 .footer__one-cta-title h2 {
-  color: var(--text-white);
+  color: var(--text-black);
 }
 .footer__one-cta-icon a i {
   width: 100px;
@@ -5882,7 +5882,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary-color-1);
+  background: var(--primary-color-3);
   color: var(--color-1);
   border-radius: 50%;
   font-size: 50px;
@@ -6955,7 +6955,7 @@ p {
   margin-top: 25px;
 }
 .services__one-item:hover {
-  background: var(--color-1);
+  background: var(--color-3);
 }
 .services__one-item:hover .more_btn,
 .services__one-item:hover > i {
