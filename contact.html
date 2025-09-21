@@ -219,7 +219,26 @@
 					</div>
 				</div>
 				<div class="col-lg-7 wow fadeInRight" data-wow-delay=".4s">
-					<div class="contact__area-form">
+					         <section class="contact section" id="contact">
+            <h2 class="section__title">Contáctanos</h2>
+
+            <div class="contact__container container grid">
+               <form action="" class="contact__form grid" id="contact-form">
+                  <div class="contact__group grid">
+                     <input type="text" name="user_name" placeholder="Nombre" required class="contact__input">
+                     <input type="text" name="user_email" placeholder="Email o Teléfono " required class="contact__input">
+                     <!-- <input type="text" name="user_car" placeholder="Car Model" required class="contact__input"> -->
+                     <!-- <input type="textarea" name="user_message" placeholder="(Optional) Message" required class="contact__input"> -->
+                  </div>
+                  <textarea name="user_car" placeholder="Mensaje" class="contact__input contact__area"></textarea>
+
+                  <button type="submit" class="button contact__button">Send Message</button>
+
+                  <p class="contact__message" id="contact-message"></p>
+               </form>
+            </div>
+         </section>
+					<!-- <div class="contact__area-form">
 						<h4>Enviar un Mensaje</h4>
 						<form action="#">
 							<div class="row">
@@ -251,7 +270,7 @@
 								</div>
 							</div>
 						</form>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -389,6 +408,8 @@
 	<script src="assets/js/split-text.js"></script>
 	<!-- Custom JS -->
 	<script src="assets/js/custom.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 
 </html>
