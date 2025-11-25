@@ -1,0 +1,4 @@
+Control + F = Buscar
+Control + S = Guardar
+Control + Z = Deshacer
+Control + Shift + Z = Rehacer
