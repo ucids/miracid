@@ -69,90 +69,31 @@
     </div>
   </div>
   <!-- Dark Light End -->
-    <!-- Mobile Menu Start -->
-    <div class="menu__bar-popup">
-        <div class="menu__bar-popup-top">
-            <div class="logo"><a href="index.html"><img src="assets/img/logo_miracid.png" alt="logo-image"></a></div>
-            <div class="close"><i class="fal fa-times"></i></div>
+  <!-- Mobile Menu Start -->
+  <div class="menu__bar-popup">
+    <div class="menu__bar-popup-top">
+      <div class="logo"><a href="index.html"><img src="assets/img/logo_miracid.png" alt="logo-image"></a></div>
+      <div class="close"><i class="fal fa-times"></i></div>
 
-        </div>
-        <div class="vertical-menu">
-            <div class="vertical_menu">
-                <!-- Here Menu Will Come Automatically Via Javascript / Same Menu as in Header -->
-            </div>
-        </div>
     </div>
-    <div class="menu__bar-popup-overlay"></div>
-    <!-- Mobile Menu End -->
-  <!-- Header Area Start -->
-  <div class="header__area">
-    <div class="custom_container">
-      <div class="header__area-menubar">
-        <div class="header__area-menubar-left one">
-          <div class="header__area-menubar-left-logo">
-            <a href="index.html"><img src="assets/img/logo_full.png" alt="logo"></a>
-          </div>
-        </div>
-        <div class="header__area-menubar-center">
-          <div class="header__area-menubar-center-menu">
-            <ul id="mobilemenu">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="#nosotros">Nosotros</a></li>
-              <li class="menu-item-has-children"><a href="#">Productos a Medida</a>
-                <ul class="sub-menu">
-                  <li><a href="transformadores.html">Transformadores</a></li>
-                  <li><a href="luminarias.html">Luminarias</a></li>
-                  <li><a href="conductores.html">Conductores Eléctricos</a></li>
-                  <li><a href="aisladores.html">Aisladores Eléctricos</a></li>
-                  <li><a href="catalogo.html">Catálogo de Distribución</a></li>
-                  <li><a href="renta.html">Renta de Equipos</a></li>
-                  <li class="menu-item-has-children"><a href="#">HVLS</a>
-                    <ul class="sub-menu">
-                      <li><a href="kale.html">Kale Fans</a></li>
-                      <li><a href="vento.html">Big Vento</a></li>
-                      <li><a href="bigassfans.html">Big Ass Fans</a></li>
-                      <li><a href="evaporativos.html">Equipos Evaporativos</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="extraccion.html">Extracción & Inyección</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children"><a href="#">Servicio</a>
-                <ul class="sub-menu">
-                  <li><a href="mantenimiento.html">Mantenimiento</a></li>
-                  <li><a href="codigo_red.html">Código de red</a></li>
-                  <li><a href="estudios.html">Estudios</a></li>
-                  <li><a href="instalacion.html">Instalación</a></li>
-                    
-                    
-
-
-                </ul>
-              </li>
-              <li><a href="contact.html">Contacto</a></li>
-
-            </ul>
-          </div>
-        </div>
-        <div class="header__area-menubar-right">
-          <!-- <div class="header__area-menubar-right-search">
-						<div class="search">	
-							<span class="header__area-menubar-right-search-icon open"><i class="fal fa-search"></i></span>
-						</div>
-					</div> -->
-          <div class="header__area-menubar-right-btn one">
-            <div class="item_bounce">
-              <a class="build_button" href="contact.html">Cotiza con Nosotros<i class="flaticon-right-up"></i></a>
-            </div>
-          </div>
-          <div class="header__area-menubar-right-responsive-menu menu__bar">
-            <i class="flaticon-menu-3"></i>
-          </div>
-        </div>
+    <div class="vertical-menu">
+      <div class="vertical_menu">
+        <!-- Here Menu Will Come Automatically Via Javascript / Same Menu as in Header -->
       </div>
     </div>
   </div>
+  <div class="menu__bar-popup-overlay"></div>
+  <!-- Mobile Menu End -->
+  <!-- Header Area Start -->
+  <div id="menu"></div>
+
+  <script>
+    fetch("menu.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("menu").innerHTML = data;
+      });
+  </script>
   <!-- Header Area End -->
   <!-- Breadcrumb Area Start -->
   <div class="breadcrumb__area" style="background-image: url('assets/img/renta/banner.jpg');">
@@ -179,7 +120,8 @@
           <div class="mission__area-left mr-40 xl-mr-0">
             <h2 class="title_split_anim">Renta de equipos</h2>
             <br>
-            <p>Te asesoramos para identificar qué tipo de plataforma de elevación necesitas en renta: brazo articulado, plataforma elevadora articulada, elevadores de tijera; con motor eléctrico o de combustión.
+            <p>Te asesoramos para identificar qué tipo de plataforma de elevación necesitas en renta: brazo articulado,
+              plataforma elevadora articulada, elevadores de tijera; con motor eléctrico o de combustión.
             </p>
           </div>
         </div>
@@ -206,46 +148,51 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Marcas -->
       <div class="team__area section-padding">
         <div class="container">
           <div class="row">
-                
-                <div class="col-lg-12">
-                    <div class="services__details-area">
-                        
-                        <h4 class="mb-20">Renta de andamios</h4>
-                        <ul class="services__details-area-list">
-                            <li><i class="flaticon-check-mark"></i>Andamios multidireccionales</span></li>
-                            <li><i class="flaticon-check-mark"></i>Torres de servicio</span></li>
-                            <li><i class="flaticon-check-mark"></i>Cimbra y apuntalamiento</span></li>
-                        </ul>
-                        <div class="row mt-40 mb-40">
-                            <div class="col-sm-6 sm-mb-25">
-                                <img class="img_full" src="assets/img/renta/portrait-man-with-safety-equipment-side-view-carrying-ladder.jpg" alt="image">
-                            </div>
-                        </div>
-                      <h4 class="mb-20">Genies y brazos articulados</h4>
-                         <ul class="services__details-area-list">
-                            <li><i class="flaticon-check-mark"></i>Brazo articulado de  combustion a diesel de 45 pies de altura</span></li>
-                            <li><i class="flaticon-check-mark"></i>Brazo articulado de  combustion a diesel de 60 pies de altura</span></li>
-                            <li><i class="flaticon-check-mark"></i>Brazo articulado de combustion a diesel 80 pies de altura</span></li>
-                        </ul>
-                        <h4 class="mb-20">Renta de plataformas articuladas GENIE</h4>
-                        <h4 class="mb-20">Plataformas telescópicas o brazos articulados</h4>
-                        <div class="row mt-40 mb-40">
-                            <div class="col-sm-6 sm-mb-25">
-                                <img class="img_full" src="assets/img/renta/forklift.jpg" alt="image">
-                            </div>
-                            <!-- <div class="col-sm-6">
+
+            <div class="col-lg-12">
+              <div class="services__details-area">
+
+                <h4 class="mb-20">Renta de andamios</h4>
+                <ul class="services__details-area-list">
+                  <li><i class="flaticon-check-mark"></i>Andamios multidireccionales</span></li>
+                  <li><i class="flaticon-check-mark"></i>Torres de servicio</span></li>
+                  <li><i class="flaticon-check-mark"></i>Cimbra y apuntalamiento</span></li>
+                </ul>
+                <div class="row mt-40 mb-40">
+                  <div class="col-sm-6 sm-mb-25">
+                    <img class="img_full"
+                      src="assets/img/renta/portrait-man-with-safety-equipment-side-view-carrying-ladder.jpg"
+                      alt="image">
+                  </div>
+                </div>
+                <h4 class="mb-20">Genies y brazos articulados</h4>
+                <ul class="services__details-area-list">
+                  <li><i class="flaticon-check-mark"></i>Brazo articulado de combustion a diesel de 45 pies de
+                    altura</span></li>
+                  <li><i class="flaticon-check-mark"></i>Brazo articulado de combustion a diesel de 60 pies de
+                    altura</span></li>
+                  <li><i class="flaticon-check-mark"></i>Brazo articulado de combustion a diesel 80 pies de
+                    altura</span></li>
+                </ul>
+                <h4 class="mb-20">Renta de plataformas articuladas GENIE</h4>
+                <h4 class="mb-20">Plataformas telescópicas o brazos articulados</h4>
+                <div class="row mt-40 mb-40">
+                  <div class="col-sm-6 sm-mb-25">
+                    <img class="img_full" src="assets/img/renta/forklift.jpg" alt="image">
+                  </div>
+                  <!-- <div class="col-sm-6">
                                 <img class="img_full" src="assets/img/portfolio/portfolio-8.jpg" alt="image">
                             </div> -->
-                        </div>
-                    </div>
                 </div>
+              </div>
             </div>
-          
+          </div>
+
         </div>
       </div>
       <!-- End Marcas -->
